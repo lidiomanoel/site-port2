@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lídio Manoel | Portfólio de Dados</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <h1>Lídio Manoel</h1>
+            <ul>
+                <li><a href="#sobre">Sobre Mim</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h2 class="nome-destaque">Lídio Manoel</h2>
+            <p class="frase-impacto">Transformando dados complexos do setor logístico em inteligência acionável e decisões estratégicas.</p>
+            <p class="sub-texto">Inteligência de Dados | SQL | BigQuery | Looker Studio | Python</p>
+        </section>
+
+        <section id="sobre">
+            <h3>Sobre Mim</h3>
+            <p>Atuo transformando o alto volume de dados do setor logístico em inteligência acionável. Minha missão é dar visibilidade a métricas críticas da operação para facilitar tomadas de decisão ágeis e precisas.</p>
+            <p>Com vivência direta na linha de frente da logística, entendo o negócio a fundo, garantindo que as análises e dashboards reflitam a realidade da operação e ajudem a otimizar a cadeia de suprimentos.</p>
+        </section>
+
+        <section id="habilidades">
+            <h3>Competências Técnicas</h3>
+            <ul>
+                <li><strong>Dados & Visualização:</strong> SQL, BigQuery, Looker Studio, Power BI</li>
+                <li><strong>Desenvolvimento & Linguagens:</strong> Python, Flutter, JavaScript</li>
+                <li><strong>Infraestrutura & Ferramentas:</strong> Linux, Git/GitHub, Firebase, VS Code / Cursor</li>
+            </ul>
+        </section>
+
+        <section id="projetos">
+            <h3>Projetos em Destaque</h3>
+            
+            <div class="projetos-grid">
+                <div class="projeto-card">
+                    <h4>Monitoramento de SLAs Logísticos</h4>
+                    <p><strong>Ferramentas:</strong> BigQuery, SQL, Looker Studio</p>
+                    <p>Dashboard gerencial para monitoramento de KPIs críticos (Fast Start e Strong Finish) utilizando dados simulados de uma grande operação de expedição.</p>
+                    <a href="#" class="link-projeto">Ver Dashboard Interativo</a>
+                </div>
+
+                <div class="projeto-card">
+                    <h4>Sistema Web de Escalas de Trabalho</h4>
+                    <p><strong>Ferramentas:</strong> Web, GitHub, Vercel</p>
+                    <p>Aplicação web para gestão e visualização de escalas de turnos de trabalho, facilitando o acompanhamento da equipe.</p>
+                    <a href="#" class="link-projeto">Ver Repositório</a>
+                </div>
+
+                <div class="projeto-card">
+                    <h4>App de Controle Financeiro</h4>
+                    <p><strong>Ferramentas:</strong> Flutter, Firebase</p>
+                    <p>Aplicativo mobile desenvolvido para gestão de orçamento pessoal e familiar, com sincronização de dados em nuvem.</p>
+                    <a href="#" class="link-projeto">Em Desenvolvimento</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato">
+            <h3>Vamos Conversar?</h3>
+            <p class="contato-texto">Sinta-se à vontade para entrar em contato para falarmos sobre dados, tecnologia ou novas oportunidades.</p>
+            
+            <div class="contato-links">
+                <a href="mailto:lidio.manoel10@gmail.com" class="btn-contato">📧 E-mail</a>
+                <a href="https://linkedin.com/in/lidiomanoel" target="_blank" class="btn-contato">💼 LinkedIn</a>
+                <a href="https://github.com/lidiomanoel" target="_blank" class="btn-contato">🐙 GitHub</a>
+                <a href="https://wa.me/5581983056645" target="_blank" class="btn-contato">📱 WhatsApp</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright &copy; 2026 Lídio Manoel. Todos os direitos reservados.</p>
+    </footer>
+	
+<script>
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault(); // Evita o pulo brusco padrão do HTML
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    // Pega a altura do seu cabeçalho fixo
+                    const headerHeight = document.querySelector('header').offsetHeight;
+                    
+                    // Calcula a posição exata da seção menos a altura do cabeçalho
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.scrollY - headerHeight - 20; // 20px de margem de respiro
+        
+                    // Executa a rolagem suave
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
