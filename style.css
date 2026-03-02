@@ -308,3 +308,21 @@ footer {
         padding: 4rem 1rem; /* Reduz o espaço em branco nas laterais */
     }
 }
+
+/* --- AJUSTES DE REDUNDÂNCIA NO CSS --- */
+
+/* Criamos uma nova classe para o headline para manter o gradiente, mas sem ser o nome */
+.hero-headline-gradiente {
+    font-size: 3rem !important; /* Tamanho ajustado para um headline principal */
+    margin-bottom: 1.5rem !important;
+    background: linear-gradient(90deg, var(--text-main), var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 500;
+}
+
+/* Reduzimos um pouco o tamanho da sub-texto para dar mais hierarquia ao headline */
+.sub-texto {
+    font-size: 1.1rem !important;
+    color: var(--accent-color) !important;
+}
