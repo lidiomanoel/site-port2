@@ -272,4 +272,39 @@ footer {
     border-color: var(--accent-color);
     color: var(--accent-color);
     transform: translateY(-3px);
+
+}
+
+/* --- RESPONSIVIDADE PARA DISPOSITIVOS MÓVEIS --- */
+@media (max-width: 768px) {
+    /* Ajusta o Cabeçalho e o Menu */
+    nav {
+        flex-direction: column; /* Coloca o nome em cima e os links embaixo */
+        gap: 0.8rem;
+        padding: 1rem;
+    }
+
+    nav h1 {
+        text-align: center;
+        white-space: nowrap; /* Impede que o seu nome quebre em duas linhas */
+    }
+
+    nav ul {
+        flex-wrap: wrap; /* Permite que os links se ajeitem na tela */
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    /* Ajusta o texto principal (Hero) para não ficar gigante no celular */
+    .nome-destaque {
+        font-size: 2.8rem !important;
+    }
+
+    .frase-impacto {
+        font-size: 1.2rem !important;
+    }
+
+    #hero {
+        padding: 4rem 1rem; /* Reduz o espaço em branco nas laterais */
+    }
 }
